@@ -1,0 +1,1367 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html, body {
+  overflow-x: hidden; }
+
+body {
+  position: relative;
+  font-family: "Noto Serif CJK JP", sans-serif;
+  color: #000;
+  line-height: 1.33;
+  overflow: unset; }
+
+a {
+  text-decoration: none !important;
+  transition: all .3s ease; }
+
+* a {
+  text-decoration: none !important;
+  color: unset; }
+
+h1, h2, h3, h4, h5, h6, p {
+  line-height: 1.0; }
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto; }
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+.container {
+  width: 1290px;
+  max-width: 100%;
+  padding: 0 15px;
+  margin: 0 auto; }
+
+@font-face {
+  font-family: "Noto Serif CJK JP";
+  font-weight: 400;
+  src: url(../fonts/NotoSerifCJKjp-Regular.otf); }
+@font-face {
+  font-family: "Noto Serif CJK JP";
+  font-weight: 500;
+  src: url(../fonts/NotoSerifCJKjp-Medium.otf); }
+@font-face {
+  font-family: "Noto Serif CJK JP";
+  font-weight: 600;
+  src: url(../fonts/NotoSerifCJKjp-SemiBold.otf); }
+@font-face {
+  font-family: "Noto Serif CJK JP";
+  font-weight: 700;
+  src: url(../fonts/NotoSerifCJKjp-Medium.otf); }
+@font-face {
+  font-family: "Noto Sans CJK JP";
+  font-weight: 400;
+  src: url(../fonts/NotoSansCJKjp-Regular.otf); }
+@font-face {
+  font-family: "Noto Sans CJK JP";
+  font-weight: 300;
+  src: url(../fonts/NotoSansCJKjp-DemiLight.otf); }
+@font-face {
+  font-family: "Noto Sans CJK JP";
+  font-weight: 500;
+  src: url(../fonts/NotoSansCJKjp-Medium.otf); }
+@font-face {
+  font-family: "Noto Sans CJK JP";
+  font-weight: 700;
+  src: url(../fonts/NotoSansCJKjp-Bold.otf); }
+@font-face {
+  font-family: "KozGoPr6N";
+  font-weight: 400;
+  src: url(../fonts/KozGoPr6N-Regular.otf); }
+@font-face {
+  font-family: "KozGoPr6N";
+  font-weight: 500;
+  src: url(../fonts/KozGoPr6N-Medium.otf); }
+@font-face {
+  font-family: "KozGoPr6N";
+  font-weight: 700;
+  src: url(../fonts/KozGoPr6N-Bold.otf); }
+@font-face {
+  font-family: "KozGoPr6N";
+  font-weight: 900;
+  src: url(../fonts/KozGoPr6N-Heavy.otf); }
+@font-face {
+  font-family: "A-OTF A1Mincho Std Bold";
+  src: url(../fonts/A-OTF-A1MinchoStd-Bold.otf); }
+@font-face {
+  font-family: "Centaur";
+  src: url(../fonts/CENTAUR.ttf); }
+@font-face {
+  font-family: "Century";
+  src: url(../fonts/CENTURY.ttf); }
+@keyframes scrollArrow {
+  0% {
+    transform: translateY(0); }
+  50% {
+    transform: translateY(50px); }
+  100% {
+    transform: translateY(0); } }
+@-webkit-keyframes scrollArrow {
+  0% {
+    -webkit-transform: translateY(0); }
+  50% {
+    -webkit-transform: translateY(50px); }
+  100% {
+    -webkit-transform: translateY(0); } }
+.text-center {
+  text-align: center; }
+
+.a-otf {
+  font-family: "A-OTF A1Mincho Std Bold"; }
+
+.underline {
+  text-decoration: underline; }
+
+.section-link {
+  position: relative;
+  border-bottom: 2px solid transparent;
+  line-height: 1;
+  padding-bottom: 8px;
+  padding-right: 75px;
+  font-family: "Century";
+  font-size: 20px;
+  display: inline-block; }
+  .section-link:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    border-bottom: 2px solid;
+    position: absolute;
+    left: 0;
+    bottom: -2px; }
+  .section-link:after {
+    content: '';
+    display: block;
+    width: 25px;
+    border-top: 2px solid;
+    transform: rotate(40deg);
+    position: absolute;
+    right: -2px;
+    bottom: 6px; }
+  .section-link:before, .section-link:after {
+    transition: all .3s ease; }
+  .section-link:hover:before {
+    left: 5px; }
+  .section-link:hover:after {
+    right: -7px; }
+
+@keyframes eff-pulse {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.5); }
+  100% {
+    transform: scale(1);
+    opacity: 0; } }
+a.video-link {
+  width: 70px;
+  height: 70px;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: relative;
+  border-radius: 40px; }
+  a.video-link img {
+    width: 26.8px;
+    height: auto;
+    position: absolute;
+    left: 26px;
+    top: 20px;
+    z-index: 1; }
+  a.video-link:before, a.video-link:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.3);
+    -webkit-animation: 1.5s eff-pulse .3s infinite;
+    animation: 1.5s eff-pulse .3s infinite; }
+  a.video-link:after {
+    background-color: rgba(0, 0, 0, 0.1);
+    -webkit-animation: eff-pulse 1.5s infinite;
+    animation: eff-pulse 1.5s infinite; }
+
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 9;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .5s ease; }
+
+@media (max-width: 1439px) {
+  body.nav-open .overlay {
+    opacity: 1;
+    visibility: visible; } }
+
+.page-header.side-header {
+  width: 477px;
+  padding: 96px 0;
+  display: flex;
+  transition: all 0.5s ease; }
+  @media (max-width: 1679px) {
+    .page-header.side-header {
+      opacity: 0;
+      visibility: hidden;
+      position: fixed;
+      left: -100%;
+      top: 0;
+      bottom: 0;
+      overflow: auto;
+      background-color: #fff;
+      z-index: 9; }
+      .page-header.side-header .navigation {
+        margin-bottom: 50px; } }
+  .page-header.side-header .copyright-text {
+    width: 102px;
+    font-size: 11px;
+    position: relative; }
+    .page-header.side-header .copyright-text > span {
+      position: absolute;
+      display: block;
+      left: 50%;
+      top: 50%;
+      transform: rotate(90deg);
+      transform-origin: left;
+      white-space: nowrap;
+      letter-spacing: 0.01em; }
+  .page-header.side-header .header-inner {
+    flex: 1;
+    padding: 0 40px; }
+  .page-header.side-header .logo {
+    margin: 0 20px 140px;
+    display: block; }
+  .page-header.side-header .navigation ul {
+    display: flex;
+    flex-direction: column; }
+    .page-header.side-header .navigation ul li {
+      margin-top: 40px; }
+      .page-header.side-header .navigation ul li:first-child {
+        margin-top: 0; }
+    .page-header.side-header .navigation ul a em {
+      font-size: 22px;
+      font-style: normal;
+      display: block;
+      line-height: 1.4; }
+.page-header:not(.side-header) {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 100px;
+  z-index: 9;
+  background-color: #fff; }
+  .page-header:not(.side-header) .logo {
+    margin-left: 26px; }
+    .page-header:not(.side-header) .logo img {
+      height: 60px;
+      width: auto; }
+  .page-header:not(.side-header) .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .page-header:not(.side-header) .header-right {
+    display: flex;
+    align-items: center; }
+  .page-header:not(.side-header) .navigation ul li {
+    margin: 0 15px; }
+  @media (max-width: 1439px) {
+    .page-header:not(.side-header) .nav-burger {
+      display: flex; }
+    .page-header:not(.side-header) .navigation {
+      display: none; } }
+.page-header .account-links {
+  display: flex;
+  margin-left: 30px; }
+  .page-header .account-links > a {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    color: #fff;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 700; }
+  .page-header .account-links .account-login {
+    background-color: #1AB0AA; }
+  .page-header .account-links .account-register {
+    background-color: #0A7DE2; }
+.page-header .navigation ul {
+  display: flex; }
+  .page-header .navigation ul a {
+    font-size: 15px;
+    letter-spacing: 0.08em; }
+    .page-header .navigation ul a:hover {
+      color: #2F87CF; }
+.page-header .nav-burger {
+  display: none;
+  text-decoration: none;
+  width: 30px;
+  height: 20px;
+  align-items: center; }
+  .page-header .nav-burger > span {
+    display: block;
+    border-top: 2px solid;
+    width: 30px;
+    position: relative; }
+    .page-header .nav-burger > span:before, .page-header .nav-burger > span:after {
+      content: '';
+      display: block;
+      width: 30px;
+      border-top: 2px solid;
+      position: absolute;
+      left: 0; }
+    .page-header .nav-burger > span:before {
+      top: -10px; }
+    .page-header .nav-burger > span:after {
+      bottom: -8px; }
+
+@media (max-width: 1439px) {
+  body.nav-open .page-header.side-header {
+    opacity: 1;
+    visibility: visible;
+    left: 0; } }
+@media (max-width: 575px) {
+  body.nav-open .page-header.side-header {
+    left: -100px; } }
+@media (max-width: 1679px) {
+  body.home {
+    padding-top: 100px; } }
+body.home .page-header:not(.side-header):not(.sticky-header) {
+  background-color: transparent;
+  position: absolute; }
+  @media (min-width: 1680px) {
+    body.home .page-header:not(.side-header):not(.sticky-header) .logo, body.home .page-header:not(.side-header):not(.sticky-header) .navigation {
+      visibility: hidden;
+      opacity: 0; } }
+
+section {
+  position: relative; }
+  section .sec-bg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1; }
+  section .sec-inner {
+    width: 1290px;
+    max-width: 100%;
+    padding: 0 15px;
+    margin: 0 auto; }
+    @media (max-width: 1199px) {
+      section .sec-inner {
+        width: 915px; } }
+
+.hero {
+  display: flex;
+  margin-bottom: 110px; }
+  .hero #hero {
+    flex: 1;
+    background: url(../images/home-hero-bg.png) left top no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    min-height: calc(100vh - 10px); }
+    .hero #hero .sponsorship {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      top: 18px;
+      left: 100px; }
+      @media (max-width: 1199px) {
+        .hero #hero .sponsorship {
+          flex-direction: column;
+          left: 50%;
+          transform: translateX(-50%); } }
+      .hero #hero .sponsorship > * {
+        margin-right: 28px; }
+        .hero #hero .sponsorship > *:last-child {
+          margin-right: 0; }
+      .hero #hero .sponsorship > span {
+        width: 89px;
+        line-height: 43px;
+        border: 1px solid #1e1614;
+        text-align: center;
+        font-family: "KozGoPr6N";
+        font-size: 17px;
+        font-weight: 700; }
+    .hero #hero .content {
+      color: #fff;
+      text-align: left;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: "A-OTF A1Mincho Std Bold";
+      margin: 30px 0 0 -40px;
+      opacity: 0.65; }
+      @media (max-width: 1199px) {
+        .hero #hero .content {
+          margin-left: 0; } }
+      .hero #hero .content .subtitle {
+        font-size: 27px;
+        white-space: nowrap;
+        margin-bottom: 35px; }
+        @media (max-width: 1199px) {
+          .hero #hero .content .subtitle {
+            font-size: 18px;
+            margin-bottom: 15px; } }
+      .hero #hero .content .title {
+        font-size: 60px;
+        white-space: nowrap; }
+        @media (max-width: 1199px) {
+          .hero #hero .content .title {
+            font-size: 30px;
+            white-space: normal; } }
+    .hero #hero .scroller {
+      position: absolute;
+      color: #fff;
+      bottom: 0;
+      right: 30%; }
+      @media (max-width: 1199px) {
+        .hero #hero .scroller {
+          right: 10%; } }
+      .hero #hero .scroller .anim {
+        height: 115px;
+        width: 1px;
+        border-left: 1px solid;
+        display: block; }
+        .hero #hero .scroller .anim > span {
+          display: block;
+          width: 10px;
+          height: 10px;
+          border: 5px solid;
+          border-radius: 5px;
+          position: absolute;
+          left: -5px;
+          top: 25%;
+          -webkit-animation: scrollArrow 3s 1s infinite;
+          animation: scrollArrow 3s 1s infinite; }
+      .hero #hero .scroller .txt {
+        font-family: "A-OTF A1Mincho Std Bold";
+        font-size: 13px;
+        display: block;
+        transform: rotate(90deg);
+        transform-origin: left top;
+        position: absolute;
+        right: -68px;
+        top: 3px;
+        opacity: .75;
+        letter-spacing: 0.1em; }
+
+.cfo-knowledge .sec-bg {
+  background: url(../images/cfo-bg.png) center no-repeat;
+  background-size: cover; }
+  @media (min-width: 1680px) {
+    .cfo-knowledge .sec-bg {
+      right: 140px; } }
+.cfo-knowledge .sec-inner {
+  display: flex;
+  width: 1320px;
+  max-width: 100%;
+  flex-wrap: wrap;
+  padding: 50px 0 60px; }
+  @media (max-width: 1439px) {
+    .cfo-knowledge .sec-inner {
+      padding-left: 15px;
+      padding-right: 15px; } }
+  @media (max-width: 1199px) {
+    .cfo-knowledge .sec-inner {
+      width: 915px; } }
+  .cfo-knowledge .sec-inner figure {
+    flex: 0 0 100%;
+    padding: 50px 50px 60px 0; }
+    @media (min-width: 1200px) {
+      .cfo-knowledge .sec-inner figure {
+        flex: 0 0 55%; } }
+    @media (max-width: 1199px) {
+      .cfo-knowledge .sec-inner figure {
+        padding-left: 0;
+        padding-right: 0; }
+        .cfo-knowledge .sec-inner figure img {
+          margin: 0 auto; } }
+  .cfo-knowledge .sec-inner .content {
+    flex: 0 0 100%;
+    padding: 50px 0 60px 50px;
+    color: #fff; }
+    @media (min-width: 1200px) {
+      .cfo-knowledge .sec-inner .content {
+        flex: 0 0 45%; } }
+    @media (max-width: 1199px) {
+      .cfo-knowledge .sec-inner .content {
+        padding-left: 0;
+        padding-left: 0; } }
+    .cfo-knowledge .sec-inner .content .subtitle {
+      font-size: 17px;
+      line-height: 1.7;
+      margin-bottom: 16px;
+      font-weight: 400;
+      letter-spacing: 0.09em; }
+      @media (max-width: 1199px) {
+        .cfo-knowledge .sec-inner .content .subtitle {
+          font-size: 14px;
+          margin-bottom: 10px; } }
+      .cfo-knowledge .sec-inner .content .subtitle:before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        height: 1px;
+        width: 30px;
+        border-top: 1px solid;
+        margin-right: 5px; }
+    .cfo-knowledge .sec-inner .content .title {
+      font-size: 30px;
+      line-height: 1.7;
+      margin-bottom: 20px;
+      font-weight: 400; }
+      @media (max-width: 1199px) {
+        .cfo-knowledge .sec-inner .content .title {
+          font-size: 24px; } }
+    .cfo-knowledge .sec-inner .content .txt {
+      font-size: 20px;
+      line-height: 1.7;
+      letter-spacing: 0.09em; }
+      @media (max-width: 1199px) {
+        .cfo-knowledge .sec-inner .content .txt {
+          font-size: 16px; } }
+
+.cfo-info .sec-inner {
+  display: flex;
+  padding: 90px 15px 45px;
+  flex-wrap: wrap; }
+  .cfo-info .sec-inner .title {
+    flex: 0 0 350px;
+    font-size: 33px;
+    font-family: "Centaur";
+    font-weight: 400;
+    letter-spacing: 0.09em;
+    line-height: 1.75; }
+    @media (max-width: 1199px) {
+      .cfo-info .sec-inner .title {
+        flex: 0 0 100%;
+        font-size: 28px; } }
+  .cfo-info .sec-inner table {
+    font-size: 18px;
+    line-height: 1.75;
+    letter-spacing: 0.09em;
+    margin-bottom: 20px; }
+    @media (max-width: 1199px) {
+      .cfo-info .sec-inner table {
+        font-size: 16px; } }
+    .cfo-info .sec-inner table tr td {
+      padding: 5px 10px; }
+      @media (max-width: 1199px) {
+        .cfo-info .sec-inner table tr td {
+          padding: 5px; } }
+      .cfo-info .sec-inner table tr td span {
+        display: inline-block; }
+      .cfo-info .sec-inner table tr td .a-otf {
+        font-size: 11px;
+        min-width: 110px;
+        margin-right: 20px; }
+  .cfo-info .sec-inner .content {
+    flex: 1; }
+  .cfo-info .sec-inner .btn-container {
+    text-align: right; }
+
+.cfo-training {
+  padding: 105px 0 67px; }
+  .cfo-training .sec-bg {
+    background: url(../images/cfo-training-bg.png) center no-repeat;
+    background-size: cover; }
+  .cfo-training .sec-inner .title {
+    font-size: 52px;
+    font-family: "Centaur";
+    color: #fff;
+    margin-bottom: 55px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 0.09em; }
+    @media (max-width: 1199px) {
+      .cfo-training .sec-inner .title {
+        font-size: 36px;
+        margin-bottom: 35px; } }
+  .cfo-training .sec-inner > .btn-container {
+    text-align: right;
+    color: #fff; }
+  .cfo-training .e-learning {
+    display: flex;
+    color: #fff;
+    letter-spacing: 0.09em;
+    margin-bottom: 60px; }
+    @media (max-width: 1199px) {
+      .cfo-training .e-learning {
+        flex-direction: column;
+        max-width: 915px;
+        margin-left: auto;
+        margin-right: auto; } }
+    .cfo-training .e-learning h3 {
+      font-family: "Centaur";
+      font-size: 52px;
+      line-height: 0.85;
+      font-weight: 400;
+      flex: 0 0 430px; }
+      @media (max-width: 1199px) {
+        .cfo-training .e-learning h3 {
+          flex: 0 0 100%;
+          font-size: 36px;
+          margin-bottom: 20px; } }
+      .cfo-training .e-learning h3 span {
+        display: block; }
+      .cfo-training .e-learning h3 em {
+        font-family: "Noto Sans CJK JP";
+        line-height: 1.75;
+        font-size: 22px;
+        font-style: normal; }
+        @media (max-width: 1199px) {
+          .cfo-training .e-learning h3 em {
+            font-size: 18px; } }
+    .cfo-training .e-learning p {
+      font-size: 20px;
+      line-height: 1.75;
+      font-weight: 400;
+      letter-spacing: 0.01em; }
+      @media (max-width: 1199px) {
+        .cfo-training .e-learning p {
+          font-size: 16px; } }
+      .cfo-training .e-learning p em {
+        font-size: 16px;
+        font-style: normal; }
+        @media (max-width: 1199px) {
+          .cfo-training .e-learning p em {
+            font-size: 14px; } }
+  .cfo-training .choose-genre {
+    background-color: #fff;
+    width: 915px;
+    max-width: 100%;
+    margin: 0 auto 8px;
+    border-radius: 10px;
+    display: flex;
+    padding: 3px;
+    font-family: "Noto Sans CJK JP";
+    font-weight: 300; }
+    @media (max-width: 575px) {
+      .cfo-training .choose-genre {
+        flex-direction: column; } }
+    .cfo-training .choose-genre span {
+      display: block;
+      height: 67px;
+      color: #fff;
+      background: linear-gradient(125deg, #99CCCC 0%, #60B8FF 100%);
+      border-radius: 7px;
+      line-height: 67px;
+      padding: 0 12px;
+      font-size: 14px;
+      white-space: nowrap; }
+      @media (max-width: 575px) {
+        .cfo-training .choose-genre span {
+          text-align: center; } }
+    .cfo-training .choose-genre p {
+      padding: 7px 27px;
+      font-size: 14px;
+      line-height: 26px; }
+      .cfo-training .choose-genre p a {
+        display: inline-block; }
+        .cfo-training .choose-genre p a:hover {
+          color: #2F87CF; }
+  .cfo-training .video-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -28px 60px; }
+    @media (max-width: 1439px) {
+      .cfo-training .video-list {
+        margin-left: -15px;
+        margin-right: -15px; } }
+    @media (max-width: 1199px) {
+      .cfo-training .video-list {
+        margin-left: 0;
+        margin-right: 0;
+        flex-direction: column;
+        align-items: center; } }
+    .cfo-training .video-list .video-item {
+      flex: 0 0 calc(33.33% - 56px);
+      max-width: calc(33.33% - 56px);
+      margin: 25px 28px; }
+      @media (max-width: 1439px) {
+        .cfo-training .video-list .video-item {
+          flex: 0 0 calc(33.33% - 30px);
+          max-width: calc(33.33% - 30px);
+          margin-left: 15px;
+          margin-right: 15px; } }
+      @media (max-width: 1199px) {
+        .cfo-training .video-list .video-item {
+          flex: 0 0 100%;
+          max-width: 400px;
+          margin-left: 0;
+          margin-right: 0; } }
+      .cfo-training .video-list .video-item figure {
+        position: relative; }
+        .cfo-training .video-list .video-item figure > img {
+          width: 100%; }
+        .cfo-training .video-list .video-item figure .video-link {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%); }
+      .cfo-training .video-list .video-item .btn-container {
+        text-align: center;
+        margin: -24.5px 0;
+        position: relative; }
+        .cfo-training .video-list .video-item .btn-container a {
+          display: inline-block;
+          font-size: 15px;
+          background-color: #fff;
+          padding: 15px 38px;
+          border-radius: 30px;
+          letter-spacing: 0.1em;
+          position: relative; }
+          .cfo-training .video-list .video-item .btn-container a i {
+            font-size: 14px;
+            font-style: normal;
+            color: #40A1FF;
+            margin-left: 5px; }
+          .cfo-training .video-list .video-item .btn-container a:after {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border: 1px solid;
+            border-width: 0 1px 1px 0;
+            display: block;
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            margin-top: -2px;
+            transform: rotate(-45deg);
+            transform-origin: center; }
+
+.cfo-test {
+  padding: 110px 0 94px; }
+  .cfo-test .sec-bg {
+    background: url(../images/cfo-test-bg.png) left bottom no-repeat; }
+  .cfo-test .sec-inner {
+    width: 1430px;
+    max-width: 100%;
+    text-align: center; }
+    @media (max-width: 1199px) {
+      .cfo-test .sec-inner {
+        width: 915px; } }
+    .cfo-test .sec-inner .title {
+      font-family: "Centaur";
+      font-weight: 400;
+      font-size: 63px;
+      line-height: 1;
+      margin-bottom: 3px;
+      letter-spacing: 0.09em; }
+      @media (max-width: 1199px) {
+        .cfo-test .sec-inner .title {
+          font-size: 48px; } }
+    .cfo-test .sec-inner .subtitle {
+      font-family: "Noto Sans CJK JP";
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 1;
+      margin-bottom: 23px;
+      letter-spacing: 0.09em; }
+      @media (max-width: 1199px) {
+        .cfo-test .sec-inner .subtitle {
+          font-size: 18px; } }
+    .cfo-test .sec-inner .txt {
+      font-size: 17px;
+      line-height: 1.75;
+      max-width: 670px;
+      margin: 0 auto;
+      letter-spacing: 0.05em;
+      margin-bottom: 60px; }
+      @media (max-width: 1199px) {
+        .cfo-test .sec-inner .txt {
+          font-size: 14px; } }
+  .cfo-test .cfo-test-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -16px 13px; }
+    .cfo-test .cfo-test-list .cfo-test-item {
+      flex: 0 0 100%; }
+      @media (min-width: 1200px) {
+        .cfo-test .cfo-test-list .cfo-test-item {
+          flex: 0 0 calc(33.33% - 32px);
+          max-width: calc(33.33% - 32px);
+          margin: 16px; } }
+      @media (max-width: 1199px) {
+        .cfo-test .cfo-test-list .cfo-test-item {
+          margin-bottom: 30px; }
+          .cfo-test .cfo-test-list .cfo-test-item figure img {
+            margin: 0 auto; } }
+      .cfo-test .cfo-test-list .cfo-test-item .desc {
+        padding: 35px 45px;
+        border-radius: 4px;
+        background-color: #4092F0;
+        color: #fff;
+        font-size: 18px;
+        line-height: 1.6;
+        text-align: left;
+        letter-spacing: 0.03em;
+        min-height: 238px;
+        margin-top: -8px; }
+        @media (max-width: 1199px) {
+          .cfo-test .cfo-test-list .cfo-test-item .desc {
+            min-height: 0;
+            font-size: 16px; } }
+  .cfo-test .btn-container a {
+    font-size: 17px;
+    line-height: 66px;
+    color: #2F87CF;
+    background-color: #fff;
+    border-radius: 35px;
+    box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.15);
+    display: inline-block;
+    padding: 0 70px;
+    position: relative; }
+    .cfo-test .btn-container a:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 35px;
+      box-shadow: 25px 25px 25px 0 rgba(0, 0, 0, 0.075);
+      position: absolute;
+      left: 0;
+      top: 0; }
+
+.web-seminar {
+  padding: 60px 0 100px; }
+  .web-seminar .sec-bg {
+    background: url(../images/seminar-bg.png) right bottom no-repeat;
+    background-size: cover; }
+  .web-seminar .sec-inner .content {
+    display: flex;
+    color: #fff;
+    flex-wrap: wrap; }
+    .web-seminar .sec-inner .content .title {
+      font-family: "Centaur";
+      font-size: 63px;
+      font-weight: 400;
+      letter-spacing: 0.09em;
+      flex: 0 0 100%;
+      padding: 33px 0; }
+      @media (min-width: 1200px) {
+        .web-seminar .sec-inner .content .title {
+          flex: 0 0 50%; } }
+      @media (max-width: 1199px) {
+        .web-seminar .sec-inner .content .title {
+          font-size: 48px; } }
+      .web-seminar .sec-inner .content .title em {
+        font-family: "Noto Sans CJK JP";
+        font-size: 22px;
+        font-style: normal;
+        display: block;
+        letter-spacing: 0; }
+        @media (max-width: 1199px) {
+          .web-seminar .sec-inner .content .title em {
+            font-size: 18px; } }
+    .web-seminar .sec-inner .content .txt {
+      font-size: 20px;
+      line-height: 1.75;
+      flex: 0 0 100%;
+      padding: 33px 0;
+      letter-spacing: 0.09em; }
+      @media (min-width: 1200px) {
+        .web-seminar .sec-inner .content .txt {
+          flex: 0 0 50%; } }
+      @media (max-width: 1199px) {
+        .web-seminar .sec-inner .content .txt {
+          padding: 15px 0;
+          font-size: 16px; } }
+  .web-seminar .sec-inner > .btn-container {
+    text-align: right;
+    color: #fff; }
+  .web-seminar .video-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -28px 60px; }
+    @media (max-width: 1439px) {
+      .web-seminar .video-list {
+        margin-left: -15px;
+        margin-right: -15px; } }
+    @media (max-width: 1199px) {
+      .web-seminar .video-list {
+        margin-left: 0;
+        margin-right: 0;
+        flex-direction: column;
+        align-items: center; } }
+    .web-seminar .video-list .video-item {
+      flex: 0 0 calc(33.33% - 56px);
+      max-width: calc(33.33% - 56px);
+      margin: 25px 28px; }
+      @media (max-width: 1439px) {
+        .web-seminar .video-list .video-item {
+          flex: 0 0 calc(33.33% - 30px);
+          max-width: calc(33.33% - 30px);
+          margin-left: 15px;
+          margin-right: 15px; } }
+      @media (max-width: 1199px) {
+        .web-seminar .video-list .video-item {
+          flex: 0 0 100%;
+          max-width: 400px;
+          margin-left: 0;
+          margin-right: 0; } }
+      .web-seminar .video-list .video-item figure {
+        position: relative; }
+        .web-seminar .video-list .video-item figure > img {
+          width: 100%; }
+        .web-seminar .video-list .video-item figure .item-title {
+          font-family: "Noto Sans CJK JP";
+          font-size: 23px;
+          color: #fff;
+          position: absolute;
+          left: 0;
+          top: 50%;
+          width: 100%;
+          transform: translateY(-50%);
+          text-align: center;
+          letter-spacing: 0.09em; }
+        .web-seminar .video-list .video-item figure .video-link {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%); }
+      .web-seminar .video-list .video-item .btn-container {
+        text-align: center;
+        margin: -24.5px 0;
+        position: relative; }
+        .web-seminar .video-list .video-item .btn-container a {
+          display: inline-block;
+          font-size: 15px;
+          background-color: #fff;
+          padding: 15px 38px;
+          border-radius: 30px;
+          letter-spacing: 0.1em;
+          position: relative; }
+          .web-seminar .video-list .video-item .btn-container a i {
+            font-size: 14px;
+            font-style: normal;
+            color: #40A1FF;
+            margin-left: 5px; }
+          .web-seminar .video-list .video-item .btn-container a:after {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border: 1px solid;
+            border-width: 0 1px 1px 0;
+            display: block;
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            margin-top: -2px;
+            transform: rotate(-45deg);
+            transform-origin: center;
+            color: #72bf95; }
+
+.workshop-meeting {
+  padding: 200px 0 60px;
+  margin-top: -96px; }
+  .workshop-meeting .sec-bg {
+    background: url(../images/meeting-bg.png) center no-repeat;
+    background-size: cover; }
+  .workshop-meeting .sec-inner {
+    letter-spacing: 0.09em; }
+    .workshop-meeting .sec-inner .title {
+      font-family: "Centaur";
+      font-size: 63px;
+      line-height: 1.1;
+      font-weight: 400;
+      text-align: center; }
+      @media (max-width: 1199px) {
+        .workshop-meeting .sec-inner .title {
+          font-size: 48px; } }
+    .workshop-meeting .sec-inner .subtitle {
+      font-family: "Noto Sans CJK JP";
+      font-size: 22px;
+      line-height: 1.75;
+      font-weight: 400;
+      text-align: center;
+      margin-bottom: 60px; }
+      @media (max-width: 1199px) {
+        .workshop-meeting .sec-inner .subtitle {
+          font-size: 18px; } }
+    .workshop-meeting .sec-inner .content {
+      display: flex;
+      flex-wrap: wrap; }
+    .workshop-meeting .sec-inner .workshop, .workshop-meeting .sec-inner .meeting {
+      flex: 0 0 100%;
+      position: relative;
+      margin-bottom: 60px; }
+      @media (min-width: 1200px) {
+        .workshop-meeting .sec-inner .workshop, .workshop-meeting .sec-inner .meeting {
+          flex: 0 0 50%; } }
+      .workshop-meeting .sec-inner .workshop .item-title, .workshop-meeting .sec-inner .meeting .item-title {
+        font-family: "A-OTF A1Mincho Std Bold";
+        font-size: 29px;
+        line-height: 1;
+        font-weight: 400;
+        text-align: center;
+        margin-bottom: 12px; }
+        @media (max-width: 1199px) {
+          .workshop-meeting .sec-inner .workshop .item-title, .workshop-meeting .sec-inner .meeting .item-title {
+            font-size: 22px;
+            margin-bottom: 5px; } }
+      .workshop-meeting .sec-inner .workshop .item-subtitle, .workshop-meeting .sec-inner .meeting .item-subtitle {
+        font-family: "Centaur";
+        font-size: 14px;
+        line-height: 1.75;
+        font-weight: 400;
+        color: #2F87CF;
+        text-align: center;
+        margin-bottom: 20px; }
+        @media (max-width: 1199px) {
+          .workshop-meeting .sec-inner .workshop .item-subtitle, .workshop-meeting .sec-inner .meeting .item-subtitle {
+            font-size: 12px; } }
+      .workshop-meeting .sec-inner .workshop .txt, .workshop-meeting .sec-inner .meeting .txt {
+        font-size: 20px;
+        line-height: 1.55;
+        letter-spacing: 0.01em;
+        margin-bottom: 35px; }
+        @media (max-width: 1199px) {
+          .workshop-meeting .sec-inner .workshop .txt, .workshop-meeting .sec-inner .meeting .txt {
+            font-size: 16px; } }
+      .workshop-meeting .sec-inner .workshop .latest-schedule, .workshop-meeting .sec-inner .meeting .latest-schedule {
+        margin-bottom: 30px; }
+        .workshop-meeting .sec-inner .workshop .latest-schedule > h3, .workshop-meeting .sec-inner .meeting .latest-schedule > h3 {
+          font-family: "A-OTF A1Mincho Std Bold";
+          font-size: 14px;
+          line-height: 32px;
+          position: relative;
+          display: inline-block;
+          color: #fff;
+          padding: 0 12px;
+          font-weight: 400; }
+          .workshop-meeting .sec-inner .workshop .latest-schedule > h3 > span, .workshop-meeting .sec-inner .meeting .latest-schedule > h3 > span {
+            position: relative;
+            top: -1px; }
+          .workshop-meeting .sec-inner .workshop .latest-schedule > h3:before, .workshop-meeting .sec-inner .meeting .latest-schedule > h3:before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: linear-gradient(125deg, #6DD8D1 0%, #40A1FF 90%, #40A1FF 100%);
+            z-index: -1; }
+          .workshop-meeting .sec-inner .workshop .latest-schedule > h3:after, .workshop-meeting .sec-inner .meeting .latest-schedule > h3:after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 0;
+            border: 16px solid transparent;
+            border-bottom-color: #40A1FF;
+            border-left-color: #40A1FF;
+            border-width: 16px 8px;
+            top: 0;
+            right: -16px; }
+        .workshop-meeting .sec-inner .workshop .latest-schedule .schedule-content, .workshop-meeting .sec-inner .meeting .latest-schedule .schedule-content {
+          padding: 24px;
+          box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.15);
+          background-color: #fff; }
+          .workshop-meeting .sec-inner .workshop .latest-schedule .schedule-content .schedule-title, .workshop-meeting .sec-inner .meeting .latest-schedule .schedule-content .schedule-title {
+            font-family: "Noto Sans CJK JP";
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 1;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #60B8FF;
+            margin-bottom: 20px; }
+          .workshop-meeting .sec-inner .workshop .latest-schedule .schedule-content table th, .workshop-meeting .sec-inner .workshop .latest-schedule .schedule-content table td, .workshop-meeting .sec-inner .meeting .latest-schedule .schedule-content table th, .workshop-meeting .sec-inner .meeting .latest-schedule .schedule-content table td {
+            text-align: left;
+            position: relative;
+            font-family: "Noto Sans CJK JP";
+            font-size: 15px;
+            font-weight: 300;
+            letter-spacing: 0;
+            line-height: 1.5;
+            vertical-align: top; }
+            .workshop-meeting .sec-inner .workshop .latest-schedule .schedule-content table th > span, .workshop-meeting .sec-inner .workshop .latest-schedule .schedule-content table td > span, .workshop-meeting .sec-inner .meeting .latest-schedule .schedule-content table th > span, .workshop-meeting .sec-inner .meeting .latest-schedule .schedule-content table td > span {
+              padding: 12px 0 16px;
+              display: block;
+              height: 100%; }
+              .workshop-meeting .sec-inner .workshop .latest-schedule .schedule-content table th > span:after, .workshop-meeting .sec-inner .workshop .latest-schedule .schedule-content table td > span:after, .workshop-meeting .sec-inner .meeting .latest-schedule .schedule-content table th > span:after, .workshop-meeting .sec-inner .meeting .latest-schedule .schedule-content table td > span:after {
+                content: '';
+                height: 1px;
+                border-bottom: 1px solid #C7C7C7;
+                display: block;
+                position: absolute;
+                bottom: 1px;
+                left: 0;
+                right: 0; }
+          .workshop-meeting .sec-inner .workshop .latest-schedule .schedule-content table th, .workshop-meeting .sec-inner .meeting .latest-schedule .schedule-content table th {
+            white-space: nowrap;
+            color: #2F87CF; }
+            .workshop-meeting .sec-inner .workshop .latest-schedule .schedule-content table th > span, .workshop-meeting .sec-inner .meeting .latest-schedule .schedule-content table th > span {
+              margin-right: 20px;
+              min-width: 100px; }
+              .workshop-meeting .sec-inner .workshop .latest-schedule .schedule-content table th > span:after, .workshop-meeting .sec-inner .meeting .latest-schedule .schedule-content table th > span:after {
+                right: 20px; }
+          .workshop-meeting .sec-inner .workshop .latest-schedule .schedule-content table tr:last-child th > span:after, .workshop-meeting .sec-inner .workshop .latest-schedule .schedule-content table tr:last-child td > span:after, .workshop-meeting .sec-inner .meeting .latest-schedule .schedule-content table tr:last-child th > span:after, .workshop-meeting .sec-inner .meeting .latest-schedule .schedule-content table tr:last-child td > span:after {
+            display: none; }
+          .workshop-meeting .sec-inner .workshop .latest-schedule .schedule-content .btn-container, .workshop-meeting .sec-inner .meeting .latest-schedule .schedule-content .btn-container {
+            text-align: center;
+            margin-top: 18px; }
+            .workshop-meeting .sec-inner .workshop .latest-schedule .schedule-content .btn-container a, .workshop-meeting .sec-inner .meeting .latest-schedule .schedule-content .btn-container a {
+              display: inline-block;
+              background: linear-gradient(125deg, #6DD8D1 0%, #40A1FF 90%, #40A1FF 100%);
+              font-family: "Noto Sans CJK JP";
+              font-size: 13px;
+              line-height: 36px;
+              padding: 0 25px;
+              border-radius: 20px;
+              color: #fff; }
+      .workshop-meeting .sec-inner .workshop > .btn-container, .workshop-meeting .sec-inner .meeting > .btn-container {
+        text-align: right; }
+        .workshop-meeting .sec-inner .workshop > .btn-container .section-link, .workshop-meeting .sec-inner .meeting > .btn-container .section-link {
+          color: #2F87CF;
+          font-size: 16px;
+          padding-right: 45px; }
+    @media (min-width: 1200px) {
+      .workshop-meeting .sec-inner .workshop {
+        padding-right: 45px; }
+        .workshop-meeting .sec-inner .workshop:after {
+          content: '';
+          display: block;
+          border-right: 1px dotted;
+          width: 1px;
+          position: absolute;
+          right: 0;
+          top: 0;
+          bottom: 45px; } }
+    @media (min-width: 1200px) {
+      .workshop-meeting .sec-inner .meeting {
+        padding-left: 45px; } }
+
+.career-recruitment {
+  padding: 120px 0 50px; }
+  .career-recruitment .sec-bg {
+    background: url(../images/cr-bg.png) top center no-repeat;
+    background-size: cover; }
+    .career-recruitment .sec-bg:before {
+      content: '';
+      background: linear-gradient(125deg, #66D1D9 0%, #388AE8 100%);
+      display: block;
+      left: 0;
+      top: 0;
+      right: 50%;
+      bottom: 0;
+      position: absolute;
+      opacity: .85; }
+      @media (max-width: 1199px) {
+        .career-recruitment .sec-bg:before {
+          right: 0;
+          bottom: calc(50% - 100px); } }
+      @media (max-width: 767px) {
+        .career-recruitment .sec-bg:before {
+          bottom: calc(50% - 135px); } }
+    .career-recruitment .sec-bg:after {
+      content: '';
+      background: #fff;
+      display: block;
+      right: 0;
+      top: 0;
+      left: 50%;
+      bottom: 0;
+      position: absolute;
+      opacity: .85; }
+      @media (max-width: 1199px) {
+        .career-recruitment .sec-bg:after {
+          left: 0;
+          top: calc(50% + 100px); } }
+      @media (max-width: 767px) {
+        .career-recruitment .sec-bg:after {
+          top: calc(50% + 135px); } }
+  .career-recruitment .sec-inner .title {
+    font-family: "Centaur";
+    font-size: 63px;
+    margin-bottom: 10px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 0.05em; }
+    @media (max-width: 1199px) {
+      .career-recruitment .sec-inner .title {
+        font-size: 48px; } }
+    @media (max-width: 575px) {
+      .career-recruitment .sec-inner .title {
+        font-size: 38px; } }
+  .career-recruitment .sec-inner .subtitle {
+    font-family: "Noto Sans CJK JP";
+    font-size: 22px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 0.05em; }
+    @media (max-width: 1199px) {
+      .career-recruitment .sec-inner .subtitle {
+        font-size: 18px; } }
+  .career-recruitment .sec-inner .content {
+    display: flex;
+    flex-wrap: wrap; }
+    .career-recruitment .sec-inner .content .cfo-hr, .career-recruitment .sec-inner .content .hiring {
+      flex: 0 0 100%;
+      padding: 65px 0 50px; }
+      @media (min-width: 1200px) {
+        .career-recruitment .sec-inner .content .cfo-hr, .career-recruitment .sec-inner .content .hiring {
+          flex: 0 0 50%; } }
+      .career-recruitment .sec-inner .content .cfo-hr .item-title, .career-recruitment .sec-inner .content .hiring .item-title {
+        font-family: "KozGoPr6N";
+        font-size: 30px;
+        line-height: 1;
+        font-weight: 400;
+        padding-bottom: 25px;
+        position: relative;
+        margin-bottom: 12px; }
+        @media (max-width: 1199px) {
+          .career-recruitment .sec-inner .content .cfo-hr .item-title, .career-recruitment .sec-inner .content .hiring .item-title {
+            font-size: 24px; } }
+        .career-recruitment .sec-inner .content .cfo-hr .item-title:after, .career-recruitment .sec-inner .content .hiring .item-title:after {
+          content: '';
+          display: block;
+          width: 40px;
+          height: 4px;
+          border-top: 4px solid;
+          position: absolute;
+          left: 0;
+          bottom: 0; }
+      .career-recruitment .sec-inner .content .cfo-hr .txt, .career-recruitment .sec-inner .content .hiring .txt {
+        font-size: 20px;
+        line-height: 1.75;
+        letter-spacing: 0.03em;
+        margin-bottom: 15px; }
+        @media (max-width: 1199px) {
+          .career-recruitment .sec-inner .content .cfo-hr .txt, .career-recruitment .sec-inner .content .hiring .txt {
+            font-size: 16px; } }
+      .career-recruitment .sec-inner .content .cfo-hr .btn-container, .career-recruitment .sec-inner .content .hiring .btn-container {
+        margin-bottom: 40px;
+        margin-left: -5px; }
+        @media (max-width: 1199px) {
+          .career-recruitment .sec-inner .content .cfo-hr .btn-container .item-link img, .career-recruitment .sec-inner .content .hiring .btn-container .item-link img {
+            max-height: 50px;
+            width: auto; } }
+      .career-recruitment .sec-inner .content .cfo-hr > em, .career-recruitment .sec-inner .content .hiring > em {
+        font-size: 18px;
+        font-style: normal;
+        line-height: 1.75;
+        margin-top: -20px;
+        display: block; }
+        @media (max-width: 1199px) {
+          .career-recruitment .sec-inner .content .cfo-hr > em, .career-recruitment .sec-inner .content .hiring > em {
+            font-size: 14px; } }
+        @media (max-width: 475px) {
+          .career-recruitment .sec-inner .content .cfo-hr > em br, .career-recruitment .sec-inner .content .hiring > em br {
+            display: none; } }
+      .career-recruitment .sec-inner .content .cfo-hr .li, .career-recruitment .sec-inner .content .hiring .li {
+        font-size: 22px;
+        line-height: 1.75;
+        font-weight: 400;
+        letter-spacing: -0.01em;
+        color: #2F87CF;
+        margin-bottom: 10px; }
+        @media (max-width: 1199px) {
+          .career-recruitment .sec-inner .content .cfo-hr .li, .career-recruitment .sec-inner .content .hiring .li {
+            font-size: 18px; } }
+      .career-recruitment .sec-inner .content .cfo-hr .jaccs-logo, .career-recruitment .sec-inner .content .hiring .jaccs-logo {
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px; }
+        .career-recruitment .sec-inner .content .cfo-hr .jaccs-logo em, .career-recruitment .sec-inner .content .hiring .jaccs-logo em {
+          font-size: 18px;
+          letter-spacing: 0.09em;
+          font-style: normal;
+          line-height: 1.75; }
+          @media (max-width: 1199px) {
+            .career-recruitment .sec-inner .content .cfo-hr .jaccs-logo em, .career-recruitment .sec-inner .content .hiring .jaccs-logo em {
+              font-size: 14px; } }
+    .career-recruitment .sec-inner .content .cfo-hr {
+      color: #fff; }
+      @media (min-width: 1200px) {
+        .career-recruitment .sec-inner .content .cfo-hr {
+          padding-right: 75px; } }
+    @media (min-width: 1200px) {
+      .career-recruitment .sec-inner .content .hiring {
+        padding-left: 75px; } }
+    .career-recruitment .sec-inner .content .hiring .item-title {
+      color: #2F87CF; }
+    .career-recruitment .sec-inner .content .hiring > em {
+      color: #2F87CF; }
+    .career-recruitment .sec-inner .content .hiring > .btn-container:last-child {
+      margin: 0;
+      margin-top: -20px;
+      text-align: right; }
+      .career-recruitment .sec-inner .content .hiring > .btn-container:last-child a {
+        color: #2F87CF; }
+
+.page-footer {
+  text-align: center;
+  padding: 126px 0 100px;
+  position: relative; }
+  .page-footer .sec-inner {
+    width: 1290px;
+    max-width: 100%;
+    padding: 0 15px;
+    margin: 0 auto; }
+    .page-footer .sec-inner .scroller {
+      position: absolute;
+      color: #60B8FF;
+      bottom: 0;
+      right: 30%; }
+      @media (max-width: 1199px) {
+        .page-footer .sec-inner .scroller {
+          right: 10%; } }
+      .page-footer .sec-inner .scroller .anim {
+        height: 115px;
+        width: 1px;
+        border-left: 1px solid;
+        display: block; }
+        .page-footer .sec-inner .scroller .anim > span {
+          display: block;
+          width: 10px;
+          height: 10px;
+          border: 5px solid;
+          border-radius: 5px;
+          position: absolute;
+          left: -5px;
+          top: 25%;
+          -webkit-animation: scrollArrow 3s 1s infinite;
+          animation: scrollArrow 3s 1s infinite; }
+      .page-footer .sec-inner .scroller .txt {
+        font-family: "A-OTF A1Mincho Std Bold";
+        font-size: 13px;
+        display: block;
+        transform: rotate(90deg);
+        transform-origin: left top;
+        position: absolute;
+        right: -68px;
+        top: 3px;
+        opacity: .75;
+        letter-spacing: 0.1em; }
+  .page-footer .footer-logo {
+    display: inline-block;
+    margin-bottom: 60px; }
+  .page-footer .copyright {
+    font-size: 11px;
+    letter-spacing: 0.01em; }
+
+/*# sourceMappingURL=style.css.map */

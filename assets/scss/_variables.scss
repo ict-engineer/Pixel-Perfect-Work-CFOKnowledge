@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+$noto-serif-font: "Noto Serif CJK JP", sans-serif;
+$a-otf-font: "A-OTF A1Mincho Std Bold";
+$centaur-font: "Centaur";
+$century-font: "Century";
+$noto-sans-font: "Noto Sans CJK JP";
+$kozgo-font: "KozGoPr6N";
+
+$base-font: $noto-serif-font;
+
+$color-base: #000;
+$color-primary: #0F5A9B;
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-center-v {
+    display: flex;
+    align-items: center;
+}

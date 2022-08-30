@@ -1,0 +1,218 @@
+@charset "utf-8";
+
+@font-face {
+	font-family: "Noto Serif CJK JP";
+	font-weight: 400;
+	src: url(../fonts/NotoSerifCJKjp-Regular.otf);
+}
+@font-face {
+	font-family: "Noto Serif CJK JP";
+	font-weight: 500;
+	src: url(../fonts/NotoSerifCJKjp-Medium.otf);
+}
+@font-face {
+	font-family: "Noto Serif CJK JP";
+	font-weight: 600;
+	src: url(../fonts/NotoSerifCJKjp-SemiBold.otf);
+}
+@font-face {
+	font-family: "Noto Serif CJK JP";
+	font-weight: 700;
+	src: url(../fonts/NotoSerifCJKjp-Medium.otf);
+}
+
+@font-face {
+	font-family: "Noto Sans CJK JP";
+	font-weight: 400;
+	src: url(../fonts/NotoSansCJKjp-Regular.otf);
+}
+@font-face {
+	font-family: "Noto Sans CJK JP";
+	font-weight: 300;
+	src: url(../fonts/NotoSansCJKjp-DemiLight.otf);
+}
+@font-face {
+	font-family: "Noto Sans CJK JP";
+	font-weight: 500;
+	src: url(../fonts/NotoSansCJKjp-Medium.otf);
+}
+@font-face {
+	font-family: "Noto Sans CJK JP";
+	font-weight: 700;
+	src: url(../fonts/NotoSansCJKjp-Bold.otf);
+}
+
+@font-face {
+	font-family: "KozGoPr6N";
+	font-weight: 400;
+	src: url(../fonts/KozGoPr6N-Regular.otf);
+}
+@font-face {
+	font-family: "KozGoPr6N";
+	font-weight: 500;
+	src: url(../fonts/KozGoPr6N-Medium.otf);
+}
+@font-face {
+	font-family: "KozGoPr6N";
+	font-weight: 700;
+	src: url(../fonts/KozGoPr6N-Bold.otf);
+}
+@font-face {
+	font-family: "KozGoPr6N";
+	font-weight: 900;
+	src: url(../fonts/KozGoPr6N-Heavy.otf);
+}
+
+@font-face {
+	font-family: "A-OTF A1Mincho Std Bold";
+	src: url(../fonts/A-OTF-A1MinchoStd-Bold.otf);
+}
+
+@font-face {
+	font-family: "Centaur";
+	src: url(../fonts/CENTAUR.ttf);
+}
+
+@font-face {
+	font-family: "Century";
+	src: url(../fonts/CENTURY.ttf);
+}
+
+@keyframes scrollArrow {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(50px); }
+    100% { transform: translateY(0); }
+}
+
+@-webkit-keyframes scrollArrow {
+    0% { -webkit-transform: translateY(0); }
+    50% { -webkit-transform: translateY(50px); }
+    100% { -webkit-transform: translateY(0); }
+}
+
+.text-center {
+	text-align: center;
+}
+.a-otf {
+	font-family: $a-otf-font;
+}
+.underline {
+	text-decoration: underline;
+}
+.section-link {
+	position: relative;
+	border-bottom: 2px solid transparent;
+	line-height: 1;
+	padding-bottom: 8px;
+	padding-right: 75px;
+	font-family: $century-font;
+	font-size: 20px;
+	display: inline-block;
+
+	&:before {
+	    content: '';
+	    display: block;
+	    width: 100%;
+	    height: 2px;
+	    border-bottom: 2px solid;
+	    position: absolute;
+	    left: 0;
+	    bottom: -2px;
+	}
+
+	&:after {
+		content: '';
+	    display: block;
+	    width: 25px;
+	    border-top: 2px solid;
+	    transform: rotate(40deg);
+	    position: absolute;
+	    right: -2px;
+	    bottom: 6px;
+	}
+
+	&:before, &:after {
+		transition: all .3s ease;
+	}
+
+	&:hover {
+		&:before {
+			left: 5px;
+		}
+
+		&:after {
+			right: -7px;
+		}
+	}
+}
+
+@keyframes eff-pulse {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.5);
+	}
+	100% {
+		transform: scale(1);
+		opacity: 0;
+	}
+}
+
+a.video-link {
+	width: 70px;
+	height: 70px;
+	display: inline-block;
+	background-color: rgba(0,0,0,0.7);
+	position: relative;
+	border-radius: 40px;
+
+	img {
+		width: 26.8px;
+		height: auto;
+		position: absolute;
+		left: 26px;
+		top: 20px;
+		z-index: 1;
+	}
+
+	&:before, &:after {
+		content: '';
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    right: 0;
+	    bottom: 0;
+	    border-radius: 50%;
+	    z-index: -1;
+	    background-color: rgba(0,0,0,.3);
+		-webkit-animation: 1.5s eff-pulse .3s infinite;
+    	animation: 1.5s eff-pulse .3s infinite;
+	}
+
+	&:after {
+		background-color: rgba(0,0,0,.1);
+		-webkit-animation: eff-pulse 1.5s infinite;
+    	animation: eff-pulse 1.5s infinite;
+	}
+}
+
+.overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 9;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s ease;
+}
+
+body.nav-open .overlay {
+	@media (max-width: 1439px) {
+		opacity: 1;
+		visibility: visible;
+	}
+}

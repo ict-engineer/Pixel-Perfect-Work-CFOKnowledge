@@ -1,0 +1,404 @@
+<!-- HTMLコード -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+
+    <title>CFO Knowledge</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- javascript -->
+    <script src="./libs/jquery/jquery-3.4.1.min.js"></script>
+</head>
+
+<body class="home">
+    <div class="page-header">
+        <div class="header-inner">
+            <a href="./index.html" class="logo">
+                <img src="./assets/images/logo.png" alt="CFO Knowledge" />
+            </a>
+            <div class="header-right">
+                <a href="javascript:void(0)" class="nav-burger"><span></span></a>
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="./info.html"><span>お知らせ</span></a></li>
+                        <li><a href="./about.html"><span>CFＯナレッジ・スクエアとは？</span></a></li>
+                        <li><a href="./el.html"><span>e-learning</span></a></li>
+                        <li><a href="./diagnosis.html"><span>CFO適正診断テスト</span></a></li>
+                        <li><a href="./seminer.html"><span>無料WEBセミナー</span></a></li>
+                        <li><a href="./workshop.html"><span>勉強会＆交流会</span></a></li>
+                    </ul>
+                </nav>
+                <div class="account-links">
+                    <a href="./login.html" class="account-login"><span>会員<br>ログイン</span></a>
+                    <a href="./register.html" class="account-register"><span>会員登録</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="overlay"></div>
+
+    <section class="hero">
+        <div class="page-header side-header">
+            <div class="copyright-text">
+                <span>&copy; CFO Knowledge.  All Rights Reserved.</span>
+            </div>
+            <div class="header-inner">
+                <a href="./index.html" class="logo">
+                    <img src="./assets/images/logo.png" alt="CFO Knowledge" />
+                </a>
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="./info.html"><em>INFORMATION</em><span>お知らせ</span></a></li>
+                        <li><a href="./about.html"><em>ABOUT US</em><span>CFＯナレッジ・スクエアとは？</span></a></li>
+                        <li><a href="./el.html"><em>e-learning</em><span>CFOのリアルな経験の共有</span></a></li>
+                        <li><a href="./diagnosis.html"><em>DIAGNOSIS</em><span>CFO適正診断テスト</span></a></li>
+                        <li><a href="./seminer.html"><em>無料WEBセミナー</em><span>一流講師＋CFO限定</span></a></li>
+                        <li><a href="./workshop.html"><em>WORKSHOP&MEETING</em><span>勉強会＆交流会</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="hero">
+            <div class="sponsorship">
+                <span>協 賛</span>
+                <img src="./assets/images/sponsor1.png" alt="" />
+                <img src="./assets/images/sponsor2.png" alt="" />
+            </div>
+            <div class="content">
+                <h3 class="subtitle"><span>ベンチャー企業ＣＦＯのための“知の広場”</span></h3>
+                <h2 class="title"><span>CFO KNOWLEDGE SQUARE</span></h2>
+            </div>
+            <a href="javascript:void(0)" class="scroller">
+                <span class="anim"><span></span></span>
+                <span class="txt">Scroll</span>
+            </a>
+        </div>
+    </section>
+
+    <section class="cfo-knowledge">
+        <div class="sec-bg"></div>
+        <div class="sec-inner">
+            <figure>
+                <img src="./assets/images/cfo.png" alt="" />
+            </figure>
+            <div class="content">
+                <h3 class="subtitle"><span>WHAT IS CFO KNOWLEDGE SQUARE？</span></h3>
+                <h2 class="title"><span>「ＫＮＯＷＬＥＤＧＥ＝知」が<br> ＣＦＯの能力と企業価値を向上させる</span></h2>
+                <p class="txt">ベンチャー企業には大きな夢とともに「リスク」がつきものです。特に経験・専門性の有無を問わず管理部門全体を管掌するCFOには思いもよらない責任が降りかかることもあります。<br>CFＯナレッジ・スクエアは、CFO同士が経験を共有したり、最新の実務情報の提供を受けるための会員制のクローズドなプラットフォームです。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cfo-info">
+        <div class="sec-inner">
+            <h2 class="title"><span>INFORMATION</span></h2>
+            <div class="content">
+                <table>
+                    <tr>
+                        <td><span>2020.9.1</span></td>
+                        <td><a href="#"><span class="a-otf text-center">study & meeting</span><span class="underline">勉強会＆交流会を更新しました!詳しくはこちら</span></a></td>
+                    </tr>
+                    <tr>
+                        <td><span>2020.9.1</span></td>
+                        <td><a href="#"><span class="a-otf text-center">seminar</span><span class="underline">セミナー情報を更新しました!詳しくはこちら</span></a></td>
+                    </tr>
+                    <tr>
+                        <td><span>2020.8.31</span></td>
+                        <td><a href="#"><span class="a-otf text-center">information</span><span>サイトをオープンしました!</span></a></td>
+                    </tr>
+                </table>
+                <div class="btn-container">
+                    <a href="#" class="section-link"><span>more</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cfo-training">
+        <div class="sec-bg"></div>
+        <div class="sec-inner">
+            <h2 class="title"><span>Training the CFO</span></h2>
+            <div class="e-learning">
+                <h3><span>e-learning</span><em>CFOのリアルな経験の共有</em></h3>
+                <p>IPOを経験した現役CFO、元CFOが、CFO業務における実体験をリアルに語ります。<br>失敗、トラブル、社長との対立・・・書籍や公開セミナーでは知ることのできないCFOの真実に迫ります。<br><em>※実体験に基づき語っていただくため、匿名性を確保させていただいております。</em></p>
+            </div>
+            <div class="choose-genre">
+                <span>ジャンルで選ぶ</span>
+                <p><a href="#">資本政策</a>　<a href="#">ベンチャーファイナンス</a>　<a href="#">上場企業ファイナンス</a>　<a href="#">財務会計・管理会計</a>　<a href="#">税務</a>　<a href="#">内部統制</a>　<a href="#">事業計画・事業戦略</a>　<a href="#">中計策定・予実統制</a>　<a href="#">IR</a>　<a href="#">コーポ―レートガバナンス</a>　<a href="#">コンプライアンス</a>　<a href="#">組織人事労務</a></p>
+            </div>
+            <div class="video-list">
+                <div class="video-item">
+                    <figure>
+                        <img src="./assets/images/training01.png" alt="" />
+                        <a href="#" class="video-link"><img src="./assets/images/play.png" alt="" /></a>
+                    </figure>
+                    <div class="btn-container">
+                        <a href="#"><span>購入する</span><i>BUY</i></a>
+                    </div>
+                </div>
+                <div class="video-item">
+                    <figure>
+                        <img src="./assets/images/training02.png" alt="" />
+                        <a href="#" class="video-link"><img src="./assets/images/play.png" alt="" /></a>
+                    </figure>
+                    <div class="btn-container">
+                        <a href="#"><span>購入する</span><i>BUY</i></a>
+                    </div>
+                </div>
+                <div class="video-item">
+                    <figure>
+                        <img src="./assets/images/training03.png" alt="" />
+                        <a href="#" class="video-link"><img src="./assets/images/play.png" alt="" /></a>
+                    </figure>
+                    <div class="btn-container">
+                        <a href="#"><span>購入する</span><i>BUY</i></a>
+                    </div>
+                </div>
+                <div class="video-item">
+                    <figure>
+                        <img src="./assets/images/training04.png" alt="" />
+                        <a href="#" class="video-link"><img src="./assets/images/play.png" alt="" /></a>
+                    </figure>
+                    <div class="btn-container">
+                        <a href="#"><span>購入する</span><i>BUY</i></a>
+                    </div>
+                </div>
+                <div class="video-item">
+                    <figure>
+                        <img src="./assets/images/training05.png" alt="" />
+                        <a href="#" class="video-link"><img src="./assets/images/play.png" alt="" /></a>
+                    </figure>
+                    <div class="btn-container">
+                        <a href="#"><span>購入する</span><i>BUY</i></a>
+                    </div>
+                </div>
+                <div class="video-item">
+                    <figure>
+                        <img src="./assets/images/training06.png" alt="" />
+                        <a href="#" class="video-link"><img src="./assets/images/play.png" alt="" /></a>
+                    </figure>
+                    <div class="btn-container">
+                        <a href="#"><span>購入する</span><i>BUY</i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-container">
+                <a href="#" class="section-link"><span>more</span></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="cfo-test">
+        <div class="sec-bg"></div>
+        <div class="sec-inner">
+            <h2 class="title">CFO TEST</h2>
+            <h3 class="subtitle">CFO適正診断テスト</h3>
+            <p class="txt">上場企業の現役CFO及びCFO経験者で構成されるメンバーが実体験に基づき作成した、ベンチャーCFOとしての現状のスキルレベルを診断するためのテストです。</p>
+            <div class="cfo-test-list">
+                <div class="cfo-test-item">
+                    <figure>
+                        <img src="./assets/images/cfo-test01.png" alt="" />
+                    </figure>
+                    <div class="desc">
+                        ファイナンス、内部統制、コンプライアンスなど12の異なる分野から各１問づつ出題されます。各問題の選択肢は５つです。どの選択肢も必ずしも「間違い」とは言い切れませんが、妥当性が高いと思われる順に高い点数が付されています。
+                    </div>
+                </div>
+                <div class="cfo-test-item">
+                    <figure>
+                        <img src="./assets/images/cfo-test02.png" alt="" />
+                    </figure>
+                    <div class="desc">
+                        解答の制限時間は30分です。<br>全12問の合計点に基づき、レベル０～５までの診断結果をお出しします。<br>また、診断結果に応じたe-learningもリコメンドさせていただきます。
+                    </div>
+                </div>
+                <div class="cfo-test-item">
+                    <figure>
+                        <img src="./assets/images/cfo-test03.png" alt="" />
+                    </figure>
+                    <div class="desc">
+                        12の分野にはそれぞれ複数の問題が用意されており、テストを受ける度にシャッフルして出題されます。CFOとして経験を重ねながら、スキルレベルの変化の確認にご活用ください。
+                    </div>
+                </div>
+            </div>
+            <div class="btn-container">
+                <a href="#" class="button"><span>サンプル問題&テストを受けてみる</span></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="web-seminar">
+        <div class="sec-bg"></div>
+        <div class="sec-inner">
+            <div class="content">
+                <h2 class="title"><span>WEB SEMINAR</span><em>無料WEBセミナー</em></h2>
+                <p class="txt">ベンチャーCFOの業務に役立つ様々なテーマのWEBセミナーを無料で提供します。大手法律事務所や損害保険会社等とも連携し、各分野の第一人者を講師に起用します。</p>
+            </div>
+            <div class="video-list">
+                <div class="video-item">
+                    <figure>
+                        <img src="./assets/images/seminar01.png" alt="" />
+                        <h3 class="item-title">SEMINAR TITLE</h3>
+                        <a href="#" class="video-link"><img src="./assets/images/play.png" alt="" /></a>
+                    </figure>
+                    <div class="btn-container">
+                        <a href="#"><span>このセミナーの視聴を申し込む</span></a>
+                    </div>
+                </div>
+                <div class="video-item">
+                    <figure>
+                        <img src="./assets/images/seminar02.png" alt="" />
+                        <h3 class="item-title">SEMINAR TITLE</h3>
+                        <a href="#" class="video-link"><img src="./assets/images/play.png" alt="" /></a>
+                    </figure>
+                    <div class="btn-container">
+                        <a href="#"><span>このセミナーの視聴を申し込む</span></a>
+                    </div>
+                </div>
+                <div class="video-item">
+                    <figure>
+                        <img src="./assets/images/seminar03.png" alt="" />
+                        <h3 class="item-title">SEMINAR TITLE</h3>
+                        <a href="#" class="video-link"><img src="./assets/images/play.png" alt="" /></a>
+                    </figure>
+                    <div class="btn-container">
+                        <a href="#"><span>このセミナーの視聴を申し込む</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-container">
+                <a href="#" class="section-link"><span>more</span></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="workshop-meeting">
+        <div class="sec-bg"></div>
+        <div class="sec-inner">
+            <h2 class="title"><span>WORKSHOP & MEETING</span></h2>
+            <h3 class="subtitle"><span>勉強会＆交流会</span></h3>
+            <div class="content">
+                <div class="workshop">
+                    <h3 class="item-title"><span>勉強会</span></h3>
+                    <h4 class="item-subtitle"><span>WORKSHOP</span></h4>
+                    <p class="txt">日本を代表する大手一流法律事務所である●●●●法律事務所の弁護士を講師、ファシリテーターとして、CFO業務に直結する勉強会を２か月に１回程度開催します。また、ASBJ出身の公認会計士等をお招きし、会計基準や金融商品取引法改正のアップデート研修を春と秋の年２回開催します。</p>
+                    <div class="latest-schedule">
+                        <h3><span>直近の開催予定</span></h3>
+                        <div class="schedule-content">
+                            <h4 class="schedule-title"><span>ベンチャーファイナンスの法的問題点について</span></h4>
+                            <table>
+                                <tr>
+                                    <th><span>講師</span></th>
+                                    <td><span>森下仁丹株式会社<br>特別顧問（前代表取締役社長）駒村純一様</span></td>
+                                </tr>
+                                <tr>
+                                    <th><span>日時</span></th>
+                                    <td><span>2019年10月7日（月） 17時30分（受付16時45分～）～20時</span></td>
+                                </tr>
+                                <tr>
+                                    <th><span>場所</span></th>
+                                    <td><span>東京海上日動火災保険・本社ビル（本館）最上階</span></td>
+                                </tr>
+                            </table>
+                            <div class="btn-container">
+                                <a href="#"><span>お申し込み</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-container">
+                        <a href="#" class="section-link"><span>過去の開催実績</span></a>
+                    </div>
+                </div>
+                <div class="meeting">
+                    <h3 class="item-title"><span>交流会</span></h3>
+                    <h4 class="item-subtitle"><span>MEETING</span></h4>
+                    <p class="txt">名刺交換だけに終わりがちな大規模交流会とはせず、“顔の見える交流会”をコンセプトに、あえて小さな規模で、夏、年末の年２回、“特別な場所”において開催します（参加費は飲食代等の定額実費のみ）。本交流会には、ベンチャーCFOの皆様にとってメンター、相談相手となり得るゲストを毎回お招きします。</p>
+                    <div class="latest-schedule">
+                        <h3><span>直近の開催予定</span></h3>
+                        <div class="schedule-content">
+                            <table>
+                                <tr>
+                                    <th><span>日時</span></th>
+                                    <td><span>2019年10月7日（月） 17時30分（受付16時45分～）～20時</span></td>
+                                </tr>
+                                <tr>
+                                    <th><span>スペシャル<br>ゲスト</span></th>
+                                    <td><span>森下仁丹株式会社<br>特別顧問（前代表取締役社長）駒村純一様</span></td>
+                                </tr>
+                                <tr>
+                                    <th><span>場所</span></th>
+                                    <td><span>東京海上日動火災保険・本社ビル（本館）最上階</span></td>
+                                </tr>
+                            </table>
+                            <div class="btn-container">
+                                <a href="#"><span>お申し込み</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-container">
+                        <a href="#" class="section-link"><span>過去の開催実績</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="career-recruitment">
+        <div class="sec-bg"></div>
+        <div class="sec-inner">
+            <h2 class="title"><span>CAREERUP & RECRUITMENT</span></h2>
+            <h3 class="subtitle"><span>転職＆採用</span></h3>
+            <div class="content">
+                <div class="cfo-hr">
+                    <h3 class="item-title"><span>CFO人材バンク</span></h3>
+                    <p class="txt">IPO前後の企業のＣＦＯを目指す方達のための人材プールです。あなたのご経験が活かせそうな企業の求人情報を“個別に”お届けします。</p>
+                    <div class="btn-container">
+                        <a href="#" class="item-link"><img src="./assets/images/cr-link01.png" alt="" /></a>
+                    </div>
+                    <h3 class="item-title"><span>キャリア相談&模擬面接</span></h3>
+                    <p class="txt">現役・元CFOが転職やキャリア形成について、チャットやZOOMを活用してアドバイスします。<br>また、希望者には模擬面接も実施します。模擬面接ではCFOが本番の面接で聞かれそうな質問を投げかけ、回答に対する所感を述べたり、より良い回答をアドバイスしたりします。</p>
+                    <div class="btn-container">
+                        <a href="#" class="item-link"><img src="./assets/images/cr-link02.png" alt="" /></a>
+                    </div>
+                    <em>※キャリア相談をご利用するには人材バンクへの登録が必要です。<br>　人材バンクへの登録はこちら</em>
+                </div>
+                <div class="hiring">
+                    <h3 class="item-title"><span>採用をお考えの企業の方へ</span></h3>
+                    <p class="txt">ベンチャー企業と採用リスクを共有することを理念に掲げ、現役CFOをはじめ、 CFO候補、常勤監査役等をご紹介いたします。我々の人材紹介事業の特長は下記の通りです。</p>
+                    <p class="li">(1)紹介手数料の返還期間を入社から「12か月間」に設定</p>
+                    <p class="li">(2)最大12か月の分割払いに対応</p>
+                    <p class="li">(3)割安な人材紹介手数料</p>
+                    <p class="jaccs-logo">
+                        <em>※分割払いにおける集金代行業務は、ジャックス株式会社に委託しております。</em>
+                        <img src="./assets/images/jaccs-logo.png" alt="" />
+                    </p>
+                    <div class="btn-container">
+                        <a href="#" class="item-link"><img src="./assets/images/cr-link03.png" alt="" /></a>
+                    </div>
+                    <em>※求人登録は無料です。</em>
+                    <div class="btn-container">
+                        <a href="#" class="section-link"><span>more</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer" class="page-footer">
+        <div class="sec-inner">
+            <a href="./index.html" class="footer-logo"><img src="./assets/images/footer-logo.png" alt="" /></a>
+            <p class="copyright">© CFO Knowledge.  All Rights Reserved.</p>
+            <a href="javascript:void(0)" class="scroller">
+                <span class="anim"><span></span></span>
+                <span class="txt">Scroll</span>
+            </a>
+        </div>
+    </footer>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
